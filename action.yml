@@ -19,4 +19,4 @@ runs:
     - name: Poetry Version
       shell: bash
       id: poetry-version
-      run: echo "::set-output name=version::$(poetry --version | grep -oP '[\d\.]+')"
+      run: echo "version=$(poetry --version | grep -oP '[\d\.]+')" >> $GITHUB_OUTPUT
